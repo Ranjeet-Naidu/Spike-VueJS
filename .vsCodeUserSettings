@@ -1,0 +1,39 @@
+{
+    "workbench.colorTheme": "Monokai",
+    "editor.fontSize": 14,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "cSpell.userWords": [
+        "BOXART",
+        "Clickable",
+        "Comparator",
+        "Movies",
+        "Overridable",
+        "Preloader",
+        "Preloading",
+        "THIRDPARTY",
+        "Truthy",
+        "archivable",
+        "capitalise",
+        "curation",
+        "datagrams",
+        "dialog",
+        "initialisation",
+        "localised",
+        "notif",
+        "packshot",
+        "packshots",
+        "submenu",
+        "unpublish",
+        "vids"
+    ],
+    "git.autofetch": true,
+    "cSpell.language": "en-GB",
+    "window.zoomLevel": 0,
+    "eslint.validate": [
+        "javascript", {
+            "language": "vue",
+            "autoFix": true
+        }
+    ]
+}

@@ -1,0 +1,8 @@
+{
+  "plugins": [
+    "transform-runtime",
+    "transform-es2015-destructuring",
+    "transform-object-rest-spread"
+  ],
+  "presets": ["es2015", "stage-2"]
+}
