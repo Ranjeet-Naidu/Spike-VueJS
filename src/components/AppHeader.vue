@@ -2,8 +2,8 @@
   <div class="app-header">
     <h1>{{ propHeaderTitle }}</h1>
     <slot name="headerSubTitle"></slot>
-    <a href="/">Home</a>
-    <a href="/demo">Demo</a>
+    <router-link to="/">Home</router-link>
+    <router-link to="/demo">Demo</router-link>
   </div>
 </template>
 

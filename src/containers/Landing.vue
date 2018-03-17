@@ -3,7 +3,11 @@
     <div>Home Page</div>
     <img :src="imageUrl">
     <h1>{{ landingText }}</h1>
-    {{ value }}
+    <div>{{ value }}</div>
+    <div>
+      <span>Local methods </span>
+      {{ valueTwo }}
+    </div>
   </div>
 </template>
 
@@ -18,8 +22,20 @@ export default {
     return {
       imageUrl,
       landingText: 'Hello Vue',
-      value: [1, 2, 3, ...others]
+      value: [1, 2, 3, ...others],
+      valueTwo: 0
     };
+  },
+  methods: {
+    async getValue() {
+      return 123;
+    },
+    async setValue() {
+      this.valueTwo = await this.getValue();
+    }
+  },
+  created() {
+    this.setValue();
   }
 };
 </script>
