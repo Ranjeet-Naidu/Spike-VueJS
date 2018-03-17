@@ -8,16 +8,16 @@
 </template>
 
 <script>
-import AppHeader from "./components/AppHeader.vue";
+import AppHeader from './components/AppHeader.vue';
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
-    "app-header": AppHeader
+    'app-header': AppHeader
   },
   data: () => {
     return {
-      headerTitle: "Header Title"
+      headerTitle: 'Header Title'
     };
   }
 };
@@ -25,8 +25,9 @@ export default {
 
 <style rel="stylesheet/less" lang="scss" type="text/scss">
 $color: #42b983;
+
 .app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

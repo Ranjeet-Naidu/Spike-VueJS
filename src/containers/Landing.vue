@@ -8,16 +8,16 @@
 </template>
 
 <script>
-import imageUrl from "../assets/test.png";
+import imageUrl from '../assets/test.png';
 
 const others = [4, 5, 6];
 
 export default {
-  app: "Home",
+  app: 'Home',
   data: () => {
     return {
       imageUrl,
-      landingText: "Hello Vue",
+      landingText: 'Hello Vue',
       value: [1, 2, 3, ...others]
     };
   }

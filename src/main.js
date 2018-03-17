@@ -1,12 +1,12 @@
-import Vue from "vue";
-import App from "./App.vue";
-import router from "./router";
+import Vue from 'vue';
+import App from './App.vue';
+import router from './router';
 
 const entryPoint = new Vue({
-  router,
-  render: h => h(App)
+  ...App,
+  router
 });
 
-entryPoint.$mount("#app");
+entryPoint.$mount('#app');
 
 export { entryPoint, router };

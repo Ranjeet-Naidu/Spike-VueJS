@@ -3,13 +3,13 @@
     <h1>{{ propHeaderTitle }}</h1>
     <slot name="headerSubTitle"></slot>
     <a href="/">Home</a>
-    <a href="#/demo">Demo</a>
+    <a href="/demo">Demo</a>
   </div>
 </template>
 
 <script>
 export default {
-  props: ["prop-header-title"]
+  props: ['prop-header-title']
 };
 </script>
 
