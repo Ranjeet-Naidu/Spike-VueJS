@@ -1,8 +1,7 @@
-// https://eslint.org/docs/user-guide/configuring
-
 module.exports = {
+  root: true,
   parser: 'babel-eslint',
-  plugins: ['html'],
+  plugins: ['html', 'vue'],
   rules: {
     "array-bracket-spacing": "off",
     "arrow-spacing": "off",
