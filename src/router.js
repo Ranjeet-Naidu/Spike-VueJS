@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import LandingPage from './containers/Landing.vue';
-import DemoPage from './containers/Demo.vue';
+import LandingPage from './views/Landing.vue';
+import DemoPage from './views/Demo.vue';
 
 Vue.use(VueRouter);
 
