@@ -4,7 +4,8 @@ import mutations from './mutations';
 
 const state = {
   counter: 1,
-  posts: []
+  posts: [],
+  photos: []
 };
 
 export default {

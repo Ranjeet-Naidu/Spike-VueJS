@@ -10,7 +10,13 @@ const getPosts = async context => {
   context.commit('GET_POSTS_SUCCESS', data);
 };
 
+const getPhotos = async context => {
+  const { data } = await httpService.get(API_URL.PHOTOS);
+  context.commit('GET_PHOTOS_SUCCESS', data);
+};
+
 export default {
   incrementCounter,
-  getPosts
+  getPosts,
+  getPhotos
 };

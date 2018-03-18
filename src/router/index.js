@@ -14,7 +14,7 @@ const router = new VueRouter({
       component: LandingPage
     },
     {
-      path: '/demo',
+      path: '/demo/:type',
       component: DemoPage
     }
   ]

@@ -2,8 +2,17 @@
   <div class="app-header">
     <h1>{{ propHeaderTitle }}</h1>
     <slot name="headerSubTitle"></slot>
-    <router-link to="/">Home</router-link>
-    <router-link to="/demo">Demo</router-link>
+    <div class="app-header__navigation">
+      <span>
+        <router-link to="/">Home</router-link>
+      </span>
+      <span>
+        <router-link to="/demo/posts">Demo posts</router-link>
+      </span>
+      <span>
+        <router-link to="/demo/photos">Demo photos</router-link>
+      </span>
+    </div>
   </div>
 </template>
 
@@ -17,6 +26,14 @@ export default {
   .app-header {
     h1 {
       font-size: 20px;
+    }
+
+    &__navigation {
+      margin-top: 20px;
+
+      span {
+        padding: 10px;
+      }
     }
   }
 </style>
