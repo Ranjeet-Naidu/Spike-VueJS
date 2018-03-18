@@ -3,7 +3,8 @@ import getters from './getters';
 import mutations from './mutations';
 
 const state = {
-  counter: 1
+  counter: 1,
+  posts: []
 };
 
 export default {

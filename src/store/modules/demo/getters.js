@@ -1,8 +1,12 @@
 const counter = state => {
-  console.log('in getter ', state);
   return state.counter;
 };
 
+const posts = state => {
+  return state.posts;
+};
+
 export default {
-  counter
+  counter,
+  posts
 };
