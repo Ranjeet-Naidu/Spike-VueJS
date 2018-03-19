@@ -1,24 +1,37 @@
 <template>
-  <div class="app">
-    <app-header :prop-header-title=headerTitle>
-      <span slot="headerSubTitle">Sub title</span>
-    </app-header>
-    <router-view></router-view>
-  </div>
+  <v-app dark>
+    <app-navigation :p-nav-data=navData app></app-navigation>
+    <v-content>
+      <v-container grid-list-md>
+        <v-layout row>
+          <router-view fill-height></router-view>
+        </v-layout>
+      </v-container>
+    </v-content>
+    <v-footer app fixed>
+      <span></span>
+    </v-footer>
+  </v-app>
 </template>
 
 <script>
-import AppHeader from './components/AppHeader.vue';
+import AppNavigation from './components/AppNavigation.vue';
+import { mapGetters } from 'vuex';
 
 export default {
   name: 'App',
   components: {
-    'app-header': AppHeader
+    'app-navigation': AppNavigation
   },
   data: () => {
     return {
-      headerTitle: 'Header Title'
+      drawer: false
     };
+  },
+  computed: {
+    ...mapGetters({
+      navData: 'navigation/navData'
+    })
   }
 };
 </script>

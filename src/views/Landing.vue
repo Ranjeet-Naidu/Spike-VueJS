@@ -1,6 +1,5 @@
 <template>
   <div class="app-landing">
-    <div>Home Page</div>
     <img :src="imageUrl">
     <h1>{{ landingText }}</h1>
     <div>{{ value }}</div>
@@ -43,10 +42,9 @@ export default {
 <style lang="sass" scoped>
   .app-landing {
     margin-top: 30px;
-    background-color: #EEEEEE;
 
     img {
-      width: 100px;
+      width: 300px;
     }
   }
 </style>

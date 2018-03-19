@@ -1,0 +1,34 @@
+<template>
+  <div>
+  <v-navigation-drawer clipped fixed v-model="drawer" app>
+    <v-list dense>
+      <v-list-tile @click="" v-for="nav in pNavData" :key="nav.title" :to="nav.route">
+        <v-list-tile-action>
+          <v-icon>{{ nav.icon }}</v-icon>
+        </v-list-tile-action>
+        <v-list-tile-content>
+          <v-list-tile-title>{{ nav.title }}</v-list-tile-title>
+        </v-list-tile-content>
+      </v-list-tile>
+    </v-list>
+  </v-navigation-drawer>
+  <v-toolbar app fixed clipped-left>
+    <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+    <v-toolbar-title>Application</v-toolbar-title>
+  </v-toolbar>
+  </div>
+</template>
+
+<script>
+export default {
+  data: () => {
+    return {
+      drawer: false
+    };
+  },
+  props: ['p-nav-data']
+};
+</script>
+
+<style lang="sass" scoped></style>
+
