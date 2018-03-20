@@ -38,17 +38,19 @@ export default {
     $route: 'fetchData'
   },
   mounted() {
+    this.resetState();
     this.paramType = this.$route.params.type;
   },
-  created() {},
   methods: {
     fetchData: function() {
+      this.resetState();
       this.paramType = this.$route.params.type;
     },
     ...mapActions({
       incrementCounter: 'demo/incrementCounter',
       getPosts: 'demo/getPosts',
-      getPhotos: 'demo/getPhotos'
+      getPhotos: 'demo/getPhotos',
+      resetState: 'demo/resetState'
     })
   },
   computed: {

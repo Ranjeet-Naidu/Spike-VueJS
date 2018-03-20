@@ -10,10 +10,12 @@ const router = new VueRouter({
   scrollBehavior: () => ({ x: 0, y: 0 }),
   routes: [
     {
+      name: 'Landing Page',
       path: '/',
       component: LandingPage
     },
     {
+      name: 'Demo Page',
       path: '/demo/:type',
       component: DemoPage
     }

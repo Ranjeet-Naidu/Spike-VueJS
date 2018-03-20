@@ -15,8 +15,13 @@ const getPhotos = async context => {
   context.commit('GET_PHOTOS_SUCCESS', data);
 };
 
+const resetState = context => {
+  context.commit('RESET_STATE');
+};
+
 export default {
   incrementCounter,
   getPosts,
-  getPhotos
+  getPhotos,
+  resetState
 };
