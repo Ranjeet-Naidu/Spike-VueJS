@@ -5,7 +5,6 @@ const INCREMENT_COUNTER = (state, counter) => {
 const GET_POSTS_SUCCESS = (state, data) => {
   state.photos = [];
   state.posts = data;
-  state.selectedEmail = '';
 };
 
 const GET_PHOTOS_SUCCESS = (state, data) => {
@@ -20,6 +19,7 @@ const SELECTED_EMAIL = (state, email) => {
 const RESET_STATE = state => {
   state.posts = [];
   state.photos = [];
+  state.selectedEmail = '';
 };
 
 export default {
