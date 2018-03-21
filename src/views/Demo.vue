@@ -1,9 +1,9 @@
 <template>
   <div class="demo">
     <div class="demo__counter-container">
-      <v-btn v-on:click="incrementCounter(counter)" color="info">Increment counter: {{ counter }}</v-btn>
-      <v-btn v-if="paramType === 'posts'" v-on:click="getPosts()" color="info">Get Posts</v-btn>
-      <v-btn v-if="paramType === 'photos'" v-on:click="getPhotos()" color="info">Get Photos</v-btn>
+      <v-btn @click.prevent="incrementCounter(counter)" color="info">Increment counter: {{ counter }}</v-btn>
+      <v-btn v-if="paramType === 'posts'" @click.prevent="getPosts()" color="info">Get Posts</v-btn>
+      <v-btn v-if="paramType === 'photos'" @click.prevent="getPhotos()" color="info">Get Photos</v-btn>
     </div>
 
     <v-alert v-if="selectedEmail" type="success" :value="true">
@@ -44,7 +44,7 @@ export default {
     this.resetState();
   },
   methods: {
-    resetAndSetParamType: function(type) {
+    resetAndSetParamType(type) {
       this.resetState();
       this.paramType = type;
     },
