@@ -6,29 +6,23 @@
       <v-btn v-if="paramType === 'photos'" v-on:click="getPhotos()" color="info">Get Photos</v-btn>
     </div>
 
-    <v-flex xs12 v-if="posts" v-for="post of posts" :key="post.id">
-      <v-card color="blue-grey darken-2" class="white--text">
-        <v-card-title primary-title>
-          <div class="headline">{{ post.name }}</div>
-          <div>{{ post.body }}</div>
-        </v-card-title>
-      </v-card>
-    </v-flex>
-
-    <ul v-if="photos" class="demo__photos">
-      <li v-for="photo of photos" :key="photo.id">
-        <img :src="photo.thumbnailUrl" height="42" width="42"/>
-      </li>
-    </ul>
+    <post-list v-if="posts" v-bind="{ posts, getPostId }"></post-list>
+    <photo-list v-if="photos" v-bind="{ photos }"></photo-list>
   </div>
 </template>
 
 <script>
 import { mapActions } from 'vuex';
 import { mapGetters } from 'vuex';
+import PostList from '../components/PostList.vue';
+import PhotoList from '../components/PhotoList.vue';
 
 export default {
   app: 'Demo',
+  components: {
+    'post-list': PostList,
+    'photo-list': PhotoList
+  },
   data: () => {
     return {
       paramType: ''
@@ -45,6 +39,9 @@ export default {
     fetchData: function() {
       this.resetState();
       this.paramType = this.$route.params.type;
+    },
+    getPostId: function() {
+      console.log('getPostId');
     },
     ...mapActions({
       incrementCounter: 'demo/incrementCounter',
@@ -70,19 +67,6 @@ export default {
 
       & button {
         font-size: 13px;
-      }
-    }
-
-    &__photos {
-      padding: 0;
-      margin: 0;
-      list-style-type: none;
-
-      li {
-        width: 42px;
-        height: 42px;
-        float: left;
-        margin: 1px;
       }
     }
   }

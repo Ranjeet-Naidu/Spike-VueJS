@@ -1,6 +1,6 @@
 <template>
   <v-app dark>
-    <app-navigation :p-nav-data=navData app></app-navigation>
+    <app-navigation v-bind="{ navData }" app></app-navigation>
     <v-content>
       <v-container grid-list-md>
         <v-layout row>

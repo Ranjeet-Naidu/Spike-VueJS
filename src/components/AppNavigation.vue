@@ -2,7 +2,7 @@
   <div>
   <v-navigation-drawer clipped fixed v-model="drawer" app>
     <v-list dense>
-      <v-list-tile v-on:click="setTitle()" v-for="nav in pNavData" :key="nav.title" :to="nav.route">
+      <v-list-tile v-on:click="setTitle()" v-for="nav in navData" :key="nav.title" :to="nav.route">
         <v-list-tile-action>
           <v-icon>{{ nav.icon }}</v-icon>
         </v-list-tile-action>
@@ -27,7 +27,12 @@ export default {
       title: ''
     };
   },
-  props: ['p-nav-data'],
+  props: {
+    navData: {
+      type: Array,
+      required: true
+    }
+  },
   methods: {
     setTitle: function() {
       this.title = this.$route.name;
