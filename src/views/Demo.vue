@@ -6,7 +6,11 @@
       <v-btn v-if="paramType === 'photos'" v-on:click="getPhotos()" color="info">Get Photos</v-btn>
     </div>
 
-    <post-list v-if="posts" v-bind="{ posts, getPostId }"></post-list>
+    <v-alert v-if="selectedEmail" type="success" :value="true">
+      {{ selectedEmail }}
+    </v-alert>
+
+    <post-list v-if="posts" v-bind="{ posts, getPostEmail }"></post-list>
     <photo-list v-if="photos" v-bind="{ photos }"></photo-list>
   </div>
 </template>
@@ -29,32 +33,35 @@ export default {
     };
   },
   watch: {
-    $route: 'fetchData'
+    '$route.params.type': function(type) {
+      this.resetAndSetParamType(type);
+    }
   },
-  mounted() {
-    this.resetState();
+  created() {
     this.paramType = this.$route.params.type;
   },
+  destroyed() {
+    this.resetState();
+  },
   methods: {
-    fetchData: function() {
+    resetAndSetParamType: function(type) {
       this.resetState();
-      this.paramType = this.$route.params.type;
-    },
-    getPostId: function() {
-      console.log('getPostId');
+      this.paramType = type;
     },
     ...mapActions({
       incrementCounter: 'demo/incrementCounter',
       getPosts: 'demo/getPosts',
       getPhotos: 'demo/getPhotos',
-      resetState: 'demo/resetState'
+      resetState: 'demo/resetState',
+      getPostEmail: 'demo/setSelectedEmail'
     })
   },
   computed: {
     ...mapGetters({
       counter: 'demo/counter',
       posts: 'demo/posts',
-      photos: 'demo/photos'
+      photos: 'demo/photos',
+      selectedEmail: 'demo/selectedEmail'
     })
   }
 };
@@ -68,6 +75,10 @@ export default {
       & button {
         font-size: 13px;
       }
+    }
+    &__selected-email {
+      background-color: #EEE;
+      padding: 10px;
     }
   }
 </style>

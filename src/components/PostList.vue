@@ -6,7 +6,7 @@
           <div class="headline">{{ post.name }}</div>
           <div>{{ post.body }}</div>
         </v-card-title>
-        <v-btn v-on:click="getPostId( post.id )" color="info">Get Post Id</v-btn>
+        <v-btn v-on:click="getPostEmail( post.email )" color="info">Get Post email</v-btn>
       </v-card>
     </v-flex>
     </div>
@@ -19,7 +19,7 @@ export default {
       type: Array,
       required: true
     },
-    getPostId: {
+    getPostEmail: {
       type: Function,
       required: true
     }

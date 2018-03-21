@@ -15,6 +15,10 @@ const getPhotos = async context => {
   context.commit('GET_PHOTOS_SUCCESS', data);
 };
 
+const setSelectedEmail = (context, email) => {
+  context.commit('SELECTED_EMAIL', email);
+};
+
 const resetState = context => {
   context.commit('RESET_STATE');
 };
@@ -23,5 +27,6 @@ export default {
   incrementCounter,
   getPosts,
   getPhotos,
-  resetState
+  resetState,
+  setSelectedEmail
 };

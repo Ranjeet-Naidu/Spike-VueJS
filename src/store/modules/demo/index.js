@@ -5,7 +5,8 @@ import mutations from './mutations';
 const state = {
   counter: 1,
   posts: [],
-  photos: []
+  photos: [],
+  selectedEmail: ''
 };
 
 export default {

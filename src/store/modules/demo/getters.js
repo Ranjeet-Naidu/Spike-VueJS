@@ -10,8 +10,13 @@ const photos = state => {
   return state.photos;
 };
 
+const selectedEmail = state => {
+  return state.selectedEmail;
+};
+
 export default {
   counter,
   posts,
-  photos
+  photos,
+  selectedEmail
 };
