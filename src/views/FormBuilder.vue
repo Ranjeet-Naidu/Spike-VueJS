@@ -1,63 +1,75 @@
 <template>
   <form>
-    <v-text-field
-      v-model="name"
-      label="Name"
-      :counter="10"
-      :error-messages="errors.collect('name')"
-      v-validate="'required|max:10'"
-      data-vv-name="name"
-    ></v-text-field>
-    <!-- <v-select
-      :items="items"
-      v-model="selectItems"
-      label="Select"
-      :error-messages="errors.collect('select')"
-      v-validate="'required'"
-      data-vv-name="select-items"
-    ></v-select> -->
-    <v-text-field
-      v-model="surname"
-      label="Surname"
-      :counter="10"
-      :error-messages="errors.collect('email')"
-      v-validate="'required|max:10'"
-      data-vv-name="email"
-    ></v-text-field>
-    <!-- <v-select
-      :items="options"
-      v-model="selectOptions"
-      label="Select"
-      :error-messages="errors.collect('select')"
-      v-validate="'required'"
-      data-vv-name="select-options"
-    ></v-select> -->
-
-    <!-- <v-btn @click="submit">submit</v-btn>
-    <v-btn @click="clear">clear</v-btn> -->
+    <v-layout row wrap>
+      <v-flex xs6 v-for="formItem in formBuilderData" :key="formItem.name">
+        <input-ele v-if="formItem.type === 'STRING'" v-bind="{ formItem, formData }"></input-ele>
+        <select-ele v-else-if="formItem.type === 'REF_CODE'" v-bind="{ formItem, formData }"></select-ele>
+        <checkbox-ele v-else-if="formItem.type === 'BOOLEAN'" v-bind="{ formItem, formData }"></checkbox-ele>
+      </v-flex>
+    </v-layout>
+    <v-btn @click="submit">submit</v-btn>
   </form>
 </template>
 
 <script>
+import Input from '../components/form-elements/Input.vue';
+import Select from '../components/form-elements/Select.vue';
+import Checkbox from '../components/form-elements/Checkbox.vue';
+import { mapActions } from 'vuex';
+import { mapGetters } from 'vuex';
+
 export default {
+  components: {
+    'input-ele': Input,
+    'select-ele': Select,
+    'checkbox-ele': Checkbox
+  },
+  created() {
+    this.getFormBuiderData();
+  },
   data() {
     return {
-      name: '',
-      surname: '',
-      selectItems: null,
-      items: [
-        { value: '1', text: 'item 1' },
-        { value: '2', text: 'item 2' },
-        { value: '3', text: 'item 3' },
-        { value: '4', text: 'item 4' }
-      ],
-      selectOptions: null,
-      options: ['Option 1', 'Option 2', 'Option 3', 'Option 4']
+      formData: {}
     };
+  },
+  methods: {
+    async formIsValid() {
+      let isValid = true;
+
+      for (let child of this.$children) {
+        await child.$validator.validateAll();
+        if (child.errors.items.length) {
+          // return Promise.reject();
+          isValid = false;
+        }
+      }
+
+      if (!isValid) {
+        return Promise.reject();
+      }
+    },
+    async submit() {
+      try {
+        await this.formIsValid();
+        console.log('SUBMIT HERE', this.formData);
+      } catch (err) {
+        console.log('NOIFY ERROR');
+      }
+    },
+    ...mapActions({
+      getFormBuiderData: 'formBuilder/getFormBuiderData'
+    })
+  },
+  computed: {
+    ...mapGetters({
+      formBuilderData: 'formBuilder/formBuilderData'
+    })
   }
 };
 </script>
 
-<style>
-
+<style lang="sass" scoped>
+  form {
+    width: 100%;
+  }
 </style>

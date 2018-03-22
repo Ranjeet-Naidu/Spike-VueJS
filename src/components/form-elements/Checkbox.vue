@@ -1,13 +1,15 @@
 <template>
-  <v-text-field
+  <v-checkbox
+    class="form-checkbox"
     v-model="formData[formItem.name]"
+    value="1"
     v-validate="formItem.validation"
+    type="checkbox"
     :label="formItem.name | capitalize"
-    :counter="formItem.counter"
     :error-messages="errors.collect(formItem.name.toLowerCase())"
     :data-vv-name=formItem.name.toLowerCase()
     :required="formItem.required">
-  </v-text-field>
+  </v-checkbox>
 </template>
 
 <script>
@@ -25,6 +27,8 @@ export default {
 };
 </script>
 
-<style>
-
+<style lang="sass" scoped>
+  .form-checkbox {
+    padding-top: 18px;
+  }
 </style>
