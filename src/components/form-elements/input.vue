@@ -6,7 +6,8 @@
     :counter="formItem.counter"
     :error-messages="errors.collect(formItem.name.toLowerCase())"
     :data-vv-name=formItem.name.toLowerCase()
-    :required="formItem.required">
+    :required="formItem.required"
+    :multi-line="formItem.multiLine">
   </v-text-field>
 </template>
 

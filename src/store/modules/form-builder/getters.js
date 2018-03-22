@@ -12,6 +12,7 @@ const formBuilderData = state => {
     }
 
     obj.required = !!curr.validation && curr.validation.includes('required');
+    obj.multiLine = !!curr.multiLine;
 
     prev.push({ ...curr, ...obj });
 
