@@ -18,6 +18,11 @@ const state = {
       title: 'Demo photos',
       icon: 'dashboard',
       route: '/demo/photos'
+    },
+    {
+      title: 'Form builder',
+      icon: 'dashboard',
+      route: '/form-builder'
     }
   ]
 };

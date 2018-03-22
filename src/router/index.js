@@ -2,6 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import LandingPage from '../views/Landing.vue';
 import DemoPage from '../views/Demo.vue';
+import FormBuilder from '../views/FormBuilder';
 
 Vue.use(VueRouter);
 
@@ -10,14 +11,19 @@ const router = new VueRouter({
   scrollBehavior: () => ({ x: 0, y: 0 }),
   routes: [
     {
-      name: 'Landing Page',
+      name: 'Landing',
       path: '/',
       component: LandingPage
     },
     {
-      name: 'Demo Page',
+      name: 'Demo',
       path: '/demo/:type',
       component: DemoPage
+    },
+    {
+      name: 'Form builder',
+      path: '/form-builder',
+      component: FormBuilder
     }
   ]
 });
