@@ -39,7 +39,6 @@ export default {
       for (let child of this.$children) {
         await child.$validator.validateAll();
         if (child.errors.items.length) {
-          // return Promise.reject();
           isValid = false;
         }
       }
