@@ -56,7 +56,7 @@ export default {
       }
     },
     ...mapActions({
-      getFormBuiderData: 'formBuilder/getFormBuiderData'
+      getFormBuiderData: 'formBuilder/getFormBuilderData'
     })
   },
   computed: {
