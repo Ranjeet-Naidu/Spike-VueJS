@@ -65,10 +65,12 @@ const formBuilderData = state => {
         state.formBuilderData[item]
       );
 
+      // build validations for vee-validate
       state.formBuilderData[item].validation = getValidation(
         state.formBuilderData[item]
       );
 
+      // add counter for vee-validate
       state.formBuilderData[item].counter = getCount(
         state.formBuilderData[item]
       );

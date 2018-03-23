@@ -20,17 +20,17 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-    .photo-list {
-      padding: 0;
-      margin: 0;
-      list-style-type: none;
+  .photo-list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
 
-      li {
-        width: 42px;
-        height: 42px;
-        float: left;
-        margin: 1px;
-      }
+    li {
+      width: 42px;
+      height: 42px;
+      float: left;
+      margin: 1px;
     }
+  }
 </style>
 

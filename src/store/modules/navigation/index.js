@@ -23,6 +23,11 @@ const state = {
       title: 'Form builder',
       icon: 'dashboard',
       route: '/form-builder'
+    },
+    {
+      title: 'Drag and drop',
+      icon: 'dashboard',
+      route: '/drag-and-drop'
     }
   ]
 };

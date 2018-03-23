@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "vddl": "^0.7.1",
     "vee-validate": "^2.0.6",
     "vue": "^2.5.16",
     "vue-router": "^3.0.1",
@@ -32,6 +33,7 @@
     "eslint-plugin-vue": "^4.3.0",
     "node-sass": "^4.7.2",
     "parcel-bundler": "^1.6.2",
-    "parcel-plugin-vue": "^1.5.0"
+    "parcel-plugin-vue": "^1.5.0",
+    "postcss-modules": "^1.1.0"
   }
 }
