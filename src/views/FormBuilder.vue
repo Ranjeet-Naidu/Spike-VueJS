@@ -2,9 +2,9 @@
   <form>
     <v-layout row wrap>
       <v-flex xs6 v-for="formItem in formBuilderData" :key="formItem.name">
-        <input-ele v-if="formItem.type === 'STRING'" v-bind="{ formItem, formData }"></input-ele>
-        <select-ele v-else-if="formItem.type === 'REF_CODE'" v-bind="{ formItem, formData }"></select-ele>
-        <checkbox-ele v-else-if="formItem.type === 'BOOLEAN'" v-bind="{ formItem, formData }"></checkbox-ele>
+        <input-ele v-if="formItem.datagramValueType === 'STRING'" v-bind="{ formItem, formData }"></input-ele>
+        <select-ele v-else-if="formItem.datagramValueType === 'REF_CODE'" v-bind="{ formItem, formData }"></select-ele>
+        <checkbox-ele v-else-if="formItem.datagramValueType === 'BOOLEAN'" v-bind="{ formItem, formData }"></checkbox-ele>
       </v-flex>
     </v-layout>
     <v-btn @click="submit">submit</v-btn>
