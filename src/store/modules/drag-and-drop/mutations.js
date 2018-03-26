@@ -1,21 +1,21 @@
-import Vue from 'vue';
-
 function setSelection(packshotData, selected) {
-  const packshotDataClone = [...packshotData];
-
-  packshotDataClone
+  const selectedPackshot = packshotData
     .find(packshotItem => packshotItem.name === selected.name)
-    .packshots.find(
-      imageItem => imageItem.src === selected.data
-    ).selected = true;
+    .packshots.find(imageItem => imageItem.src === selected.data);
 
-  return packshotDataClone;
+  selectedPackshot.isSelected = !selectedPackshot.isSelected;
 }
 
+const SET_PACKSHOT_DATA = (state, data) => {
+  state.packshotData[0].packshots = data.splice(0, Math.floor(data.length / 2));
+  state.packshotData[1].packshots = data;
+};
+
 const PACKSHOT_SELECTED = (state, data) => {
-  Vue.set(state, 'packshotData', setSelection(state.packshotData, data));
+  setSelection(state.packshotData, data);
 };
 
 export default {
+  SET_PACKSHOT_DATA,
   PACKSHOT_SELECTED
 };

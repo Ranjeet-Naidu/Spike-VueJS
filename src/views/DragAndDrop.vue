@@ -14,6 +14,9 @@ import { mapActions } from 'vuex';
 import { mapGetters } from 'vuex';
 
 export default {
+  created() {
+    this.setPackshotData();
+  },
   components: {
     'dnd-list': DndList
   },
@@ -28,6 +31,7 @@ export default {
       }
     },
     ...mapActions({
+      setPackshotData: 'dragAndDrop/setPackshotData',
       onSelection: 'dragAndDrop/onSelection'
     })
   },

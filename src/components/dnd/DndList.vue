@@ -6,7 +6,6 @@
         @add="onAdd"
         @update="onUpdate"
         :options="{ group:'pack' }">
-          <pre>{{getPackshotData.packshots}}</pre>
           <li v-for="packshot of packshotData.packshots" :key="packshot.src">
             <packshot v-bind="{ data: packshot, onSelected  }"></packshot>
           </li>
@@ -27,11 +26,6 @@ export default {
     draggable,
     packshot: Packshot
   },
-  computed: {
-    getPackshotData() {
-      return this.packshotData;
-    }
-  },
   props: {
     packshotData: {
       type: Object,
@@ -42,6 +36,18 @@ export default {
       required: false
     }
   },
+  // watch: {
+  //   packshotData(newData) {
+  //     console.log(newData);
+  //     this.packshots = this.packshotData.packshots;
+  //   }
+  // },
+  // computed: {
+  //   getPackshotData() {
+  //     console.log('enter');
+  //     this.packshots = this.packshotData.packshots;
+  //   }
+  // },
   methods: {
     onAdd(evt) {
       this.ddEvents({
