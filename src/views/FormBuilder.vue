@@ -19,11 +19,6 @@ import { mapActions } from 'vuex';
 import { mapGetters } from 'vuex';
 
 export default {
-  components: {
-    'input-ele': Input,
-    'select-ele': Select,
-    'checkbox-ele': Checkbox
-  },
   created() {
     this.getFormBuiderData();
   },
@@ -31,6 +26,11 @@ export default {
     return {
       formData: {}
     };
+  },
+  components: {
+    'input-ele': Input,
+    'select-ele': Select,
+    'checkbox-ele': Checkbox
   },
   methods: {
     async formIsValid() {

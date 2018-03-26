@@ -1,7 +1,7 @@
-const getImageLists = state => {
-  return [state.imageListOne, state.imageListTwo];
+const getPackshotData = state => {
+  return state.packshotData;
 };
 
 export default {
-  getImageLists
+  getPackshotData
 };

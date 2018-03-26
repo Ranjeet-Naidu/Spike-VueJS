@@ -1,7 +1,7 @@
-const someAction = context => {
-  // context.commit('FORUM_BUILDER_DATA', FORUM_BUILDER);
+const onSelection = (context, data) => {
+  context.commit('PACKSHOT_SELECTED', data);
 };
 
 export default {
-  someAction
+  onSelection
 };

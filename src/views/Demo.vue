@@ -18,8 +18,8 @@
 <script>
 import { mapActions } from 'vuex';
 import { mapGetters } from 'vuex';
-import PostList from '../components/demo-page/PostList';
-import PhotoList from '../components/demo-page/PhotoList.vue';
+import PostList from '../components/demo/PostList';
+import PhotoList from '../components/demo/PhotoList.vue';
 
 export default {
   app: 'Demo',
