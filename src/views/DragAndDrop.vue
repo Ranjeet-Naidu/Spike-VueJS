@@ -26,19 +26,35 @@ export default {
         case 'onSelected':
           this.onSelection(evt);
           break;
+        case 'onStart':
+          this.onDndStartAndStop(evt);
+          break;
+        case 'onEnd':
+          this.onDndStartAndStop(evt);
+          break;
+        case 'onUpdate':
+          this.onUpdate(evt);
+          break;
         default:
           console.log(evt);
       }
     },
     ...mapActions({
       setPackshotData: 'dragAndDrop/setPackshotData',
-      onSelection: 'dragAndDrop/onSelection'
+      onSelection: 'dragAndDrop/onSelection',
+      onDndStartAndStop: 'dragAndDrop/onDndStartAndStop',
+      onUpdate: 'dragAndDrop/onUpdate'
     })
   },
   computed: {
     ...mapGetters({
       packshotsData: 'dragAndDrop/getPackshotData'
     })
+  },
+  watch: {
+    packshotsData() {
+      console.log('chnages');
+    }
   }
 };
 </script>
@@ -51,6 +67,7 @@ export default {
     flex-wrap: nowrap;
     justify-content: space-evenly;
     width: 100%;
+    maring-top: 30px;
   }
 </style>
 

@@ -2,8 +2,10 @@
   <div>
     <ul class="dnd--container">
       <draggable
-        v-model="packshotData.packshots"
+        @start="onStart"
+        @end="onEnd"
         @add="onAdd"
+        @remove="onRemove"
         @update="onUpdate"
         :options="{ group:'pack' }">
           <li v-for="packshot of packshotData.packshots" :key="packshot.src">
@@ -36,25 +38,38 @@ export default {
       required: false
     }
   },
-  // watch: {
-  //   packshotData(newData) {
-  //     console.log(newData);
-  //     this.packshots = this.packshotData.packshots;
-  //   }
-  // },
-  // computed: {
-  //   getPackshotData() {
-  //     console.log('enter');
-  //     this.packshots = this.packshotData.packshots;
-  //   }
-  // },
   methods: {
+    onStart(evt) {
+      this.ddEvents({
+        // called when dragging started
+        name: this.packshotData.name,
+        type: 'onStart',
+        data: evt
+      });
+    },
+    onEnd(evt) {
+      this.ddEvents({
+        // called when dragging ended
+        name: this.packshotData.name,
+        type: 'onEnd',
+        data: evt
+      });
+    },
     onAdd(evt) {
       this.ddEvents({
         // called when item added from another list
         // add newIndex/ remove oldIndex
         name: this.packshotData.name,
         type: 'onAdd',
+        data: evt
+      });
+    },
+    onRemove(evt) {
+      this.ddEvents({
+        // called when item added from another list
+        // add newIndex/ remove oldIndex
+        name: this.packshotData.name,
+        type: 'onRemove',
         data: evt
       });
     },
@@ -86,10 +101,7 @@ export default {
     width: 450px;
 
     li {
-      width: 64px;
-      height: 94px;
       float: left;
-      margin: 4px;
     }
 
     .sortable-ghost {
