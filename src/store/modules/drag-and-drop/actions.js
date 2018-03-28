@@ -1,44 +1,17 @@
-function getRandomPackshotData() {
-  const imageList = [
-    '182',
-    '46',
-    '236',
-    '327',
-    '295',
-    '62',
-    '409',
-    '247',
-    '284',
-    '376',
-    '43',
-    '301',
-    '258',
-    '20',
-    '426',
-    '114',
-    '78',
-    '337',
-    '112',
-    '63',
-    '461',
-    '281',
-    '250',
-    '480',
-    '87',
-    '345',
-    '29',
-    '448',
-    '421',
-    '491'
-  ];
+import nanoid from 'nanoid';
 
-  return imageList.map(item => {
-    return {
-      src: `https://picsum.photos/64/94/?image=${item}`,
+function getRandomPackshotData() {
+  let imageList = [];
+
+  for (let index = 0; index < 500; index++) {
+    imageList.push({
+      src: `https://placeimg.com/64/94/any/${nanoid(5)}`,
       isSelected: false,
       isHidden: false
-    };
-  });
+    });
+  }
+
+  return imageList;
 }
 
 const setPackshotData = context => {

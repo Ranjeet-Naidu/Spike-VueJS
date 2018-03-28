@@ -1,5 +1,8 @@
 import Vue from 'vue';
 
+/**
+ * Set packshot selection
+ */
 function setSelection(packshotData, selected) {
   const selectedPackshot = packshotData
     .find(packshotItem => packshotItem.name === selected.name)
@@ -8,16 +11,17 @@ function setSelection(packshotData, selected) {
   selectedPackshot.isSelected = !selectedPackshot.isSelected;
 }
 
-// function insertArrayAt(array, index, arrayToInsert) {
-//   Array.prototype.splice.apply(array, [index, 0].concat(arrayToInsert));
-//   return array;
-// }
-
-Array.prototype.move = function(from, to) {
+/**
+ * Swap element indexes in array
+ */
+Array.prototype.swap = function(from, to) {
   this.splice(to, 0, this.splice(from, 1)[0]);
   return this;
 };
 
+/**
+ * Insert array into another array a by index
+ */
 function insertArrayByIndex(array, arrayToInsert, insertAt) {
   let modified;
 
@@ -40,18 +44,15 @@ function insertArrayByIndex(array, arrayToInsert, insertAt) {
 }
 
 const SET_PACKSHOT_DATA = (state, data) => {
-  // console.log('SET_PACKSHOT_DATA');
   state.packshotData[0].packshots = data.splice(0, Math.floor(data.length / 2));
   state.packshotData[1].packshots = data;
 };
 
 const PACKSHOT_SELECTED = (state, data) => {
-  // console.log('PACKSHOT_SELECTED');
   setSelection(state.packshotData, data);
 };
 
 const DND_START_STOP = (state, data) => {
-  // console.log('DND_START_STOP', data);
   state.packshotData
     .find(packshotItem => packshotItem.name === data.name)
     .packshots.forEach((item, index) => {
@@ -62,7 +63,6 @@ const DND_START_STOP = (state, data) => {
 };
 
 const DND_UPDATE = (state, data) => {
-  // console.log('DND_UPDATE', data);
   const selectedList = state.packshotData.find(
     packshotItem => packshotItem.name === data.name
   );
@@ -81,7 +81,7 @@ const DND_UPDATE = (state, data) => {
 
   if (!selected.length) {
     // No packshots selected
-    packshots.move(data.data.oldIndex, data.data.newIndex);
+    packshots.swap(data.data.oldIndex, data.data.newIndex);
     Vue.set(selectedList, 'packshots', packshots);
   } else {
     // With packshots selected
