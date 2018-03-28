@@ -2,6 +2,7 @@
   <div>
     <ul class="dnd--container">
       <draggable
+        v-model='draggableModel'
         @start="onStart"
         @end="onEnd"
         @add="onAdd"
@@ -21,6 +22,9 @@ import Packshot from './Packshot';
 import draggable from 'vuedraggable';
 
 export default {
+  created() {
+    this.draggableModel = this.packshotData.packshots;
+  },
   data() {
     return {};
   },
@@ -88,6 +92,11 @@ export default {
         type: 'onSelected',
         data: evt
       });
+    }
+  },
+  watch: {
+    'packshotData.packshots'(newVal) {
+      this.draggableModel = newVal;
     }
   }
 };

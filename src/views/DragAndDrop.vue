@@ -50,11 +50,6 @@ export default {
     ...mapGetters({
       packshotsData: 'dragAndDrop/getPackshotData'
     })
-  },
-  watch: {
-    packshotsData() {
-      console.log('chnages');
-    }
   }
 };
 </script>
