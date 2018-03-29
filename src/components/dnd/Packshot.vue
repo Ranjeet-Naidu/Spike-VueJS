@@ -23,6 +23,7 @@ export default {
 
 <style lang="sass" scoped>
   .packshot{
+    background-color: #1d1c1c;
     width: 64px;
     height: 94px;
     margin: 4px;

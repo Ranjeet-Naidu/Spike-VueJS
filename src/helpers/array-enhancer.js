@@ -1,5 +1,6 @@
 /**
  * Swap element indexes in array
+ * ([1, 2, 3], 1, 0) returns [2, 1, 3]
  */
 export function swapIndex(arr, indexFrom, indexTo) {
   arr.splice(indexTo, 0, arr.splice(indexFrom, 1)[0]);
@@ -8,7 +9,7 @@ export function swapIndex(arr, indexFrom, indexTo) {
 
 /**
  * Insert array into another array a by index
- * ([1, 2, 3], [A, B, C], 1) returns ([1, A, B, C, 2, 3])
+ * ([1, 2, 3], [A, B, C], 1) returns [1, A, B, C, 2, 3]
  */
 export function insertArrayByIndex(arr, arrayToInsert, insertAt) {
   let modified;

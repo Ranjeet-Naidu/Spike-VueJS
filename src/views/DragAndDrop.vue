@@ -42,7 +42,7 @@ export default {
           this.onRemove(evt);
           break;
         default:
-          console.log(evt);
+          // do nothing
       }
     },
     ...mapActions({

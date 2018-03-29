@@ -3,7 +3,7 @@ import nanoid from 'nanoid';
 function getRandomPackshotData() {
   let imageList = [];
 
-  for (let index = 0; index < 10; index++) {
+  for (let index = 0; index < 60; index++) {
     imageList.push({
       src: `https://placeimg.com/64/94/any/${nanoid(5)}`,
       isSelected: false,
