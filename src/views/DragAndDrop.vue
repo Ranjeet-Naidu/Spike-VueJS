@@ -35,6 +35,12 @@ export default {
         case 'onUpdate':
           this.onUpdate(evt);
           break;
+        case 'onAdd':
+          this.onAdd(evt);
+          break;
+        case 'onRemove':
+          this.onRemove(evt);
+          break;
         default:
           console.log(evt);
       }
@@ -43,7 +49,9 @@ export default {
       setPackshotData: 'dragAndDrop/setPackshotData',
       onSelection: 'dragAndDrop/onSelection',
       onDndStartAndStop: 'dragAndDrop/onDndStartAndStop',
-      onUpdate: 'dragAndDrop/onUpdate'
+      onUpdate: 'dragAndDrop/onUpdate',
+      onAdd: 'dragAndDrop/onAdd',
+      onRemove: 'dragAndDrop/onRemove'
     })
   },
   computed: {

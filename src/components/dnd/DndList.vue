@@ -2,6 +2,7 @@
   <div>
     <ul class="dnd--container">
       <draggable
+        :id="packshotData.name"
         v-model='draggableModel'
         @start="onStart"
         @end="onEnd"
@@ -10,7 +11,7 @@
         @update="onUpdate"
         :options="{ group:'pack' }">
           <li v-for="packshot of packshotData.packshots" :key="packshot.src">
-            <packshot v-bind="{ data: packshot, onSelected  }"></packshot>
+            <packshot-comp v-bind="{ packshot, onSelected  }"></packshot-comp>
           </li>
       </draggable>
     </ul>
@@ -30,7 +31,7 @@ export default {
   },
   components: {
     draggable,
-    packshot: Packshot
+    'packshot-comp': Packshot
   },
   props: {
     packshotData: {

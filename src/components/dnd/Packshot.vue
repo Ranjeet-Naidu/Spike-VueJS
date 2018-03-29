@@ -1,15 +1,15 @@
 <template>
-  <div v-show="!data.isHidden" class="packshot" @click="onSelected(data.src)">
+  <div v-show="!packshot.isHidden" class="packshot" @click="onSelected(packshot.src)">
     <div class="packshot--cointainer">
-      <img :src="data.src" height="94" width="64"/>
-      <v-icon v-if="data.isSelected"  class="packshot--selected-icon" color="blue">check_circle</v-icon>
+      <img :src="packshot.src" height="94" width="64"/>
+      <v-icon v-if="packshot.isSelected"  class="packshot--selected-icon" color="blue">check_circle</v-icon>
     </div>
   </div>
 </template>
 <script>
 export default {
   props: {
-    data: {
+    packshot: {
       type: Object,
       required: true
     },

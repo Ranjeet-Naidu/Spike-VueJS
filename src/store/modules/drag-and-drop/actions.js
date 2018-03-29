@@ -3,7 +3,7 @@ import nanoid from 'nanoid';
 function getRandomPackshotData() {
   let imageList = [];
 
-  for (let index = 0; index < 500; index++) {
+  for (let index = 0; index < 10; index++) {
     imageList.push({
       src: `https://placeimg.com/64/94/any/${nanoid(5)}`,
       isSelected: false,
@@ -30,9 +30,19 @@ const onUpdate = (context, data) => {
   context.commit('DND_UPDATE', data);
 };
 
+const onAdd = (context, data) => {
+  context.commit('DND_ADD', data);
+};
+
+const onRemove = (context, data) => {
+  context.commit('DND_REMOVE', data);
+};
+
 export default {
   setPackshotData,
   onSelection,
   onDndStartAndStop,
-  onUpdate
+  onUpdate,
+  onAdd,
+  onRemove
 };
