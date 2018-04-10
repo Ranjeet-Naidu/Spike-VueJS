@@ -19,7 +19,18 @@ export const FORUM_BUILDER = {
     languageAgnostic: true,
     datagramValueType: 'REF_CODE',
     refType: 'vod_channel',
-    validators: [],
+    validators: [
+      {
+        name: 'REQUIRED',
+        required: true,
+        unique: false,
+        min: 0,
+        max: 2147483647,
+        decimalplaces: 0,
+        messageType: 'ERROR',
+        message: 'Enter a value'
+      }
+    ],
     rank: 1,
     hidden: false,
     visibleOnClientApi: true,

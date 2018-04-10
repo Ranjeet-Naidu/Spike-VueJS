@@ -1,7 +1,6 @@
 <template>
-<div>
   <v-select
-    v-model="interfacer"
+    v-model="data"
     v-validate="formItem.validation"
     :items=formItem.items
     :label="formItem.name | capitalize"
@@ -10,16 +9,13 @@
     :required="formItem.required"
     @input="onInput">
   </v-select>
-</div>
 </template>
 
 <script>
+import formMixin from './form-mixin';
+
 export default {
-  data() {
-    return {
-      mymodel: null
-    };
-  },
+  mixins: [ formMixin ],
   props: {
     formItem: {
       type: Object,
@@ -32,27 +28,6 @@ export default {
     value: {
       type: Object,
       required: true
-    }
-  },
-  methods: {
-    onInput() {
-      if (this.ssEvents) {
-        this.ssEvents({
-          type: 'onChange'
-        });
-      }
-    }
-  },
-  computed: {
-    interfacer: {
-      get() {
-        return this.value[this.formItem.name];
-      },
-      set(value) {
-        this.$emit('input', {
-          [this.formItem.name]: value
-        });
-      }
     }
   }
 };

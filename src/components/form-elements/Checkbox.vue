@@ -1,38 +1,31 @@
 <template>
+  <div>
   <v-checkbox
     class="form-checkbox"
-    v-model="checkValue"
+    v-model="data"
     value="true"
     v-validate="formItem.validation"
     type="checkbox"
     :label="formItem.name | capitalize"
     :error-messages="errors.collect(formItem.name.toLowerCase())"
     :data-vv-name=formItem.name.toLowerCase()
-    :required="formItem.required">
+    :required="formItem.required"
+    @input="onInput">
   </v-checkbox>
+  </div>
 </template>
 
 <script>
+import formMixin from './form-mixin';
+
 export default {
-  created() {
-    // hack v-checkbox doesnt seem to like dynamic model
-    this.checkValue = this.formData[this.formItem.name];
-  },
-  updated() {
-    // hack v-checkbox doesnt seem to like dynamic model
-    this.formData[this.formItem.name] = this.checkValue;
-  },
-  data: () => {
-    return {
-      checkValue: null
-    };
-  },
+  mixins: [ formMixin ],
   props: {
     formItem: {
       type: Object,
       required: true
     },
-    formData: {
+    value: {
       type: Object,
       required: true
     }
