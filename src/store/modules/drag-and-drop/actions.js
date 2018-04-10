@@ -1,9 +1,9 @@
 import nanoid from 'nanoid';
 
-function getRandomPackshotData() {
+function getRandomPackshotData(data) {
   let imageList = [];
 
-  for (let index = 0; index < 60; index++) {
+  for (let index = 0; index < data; index++) {
     imageList.push({
       src: `https://placeimg.com/64/94/any/${nanoid(5)}`,
       isSelected: false,
@@ -14,8 +14,12 @@ function getRandomPackshotData() {
   return imageList;
 }
 
-const setPackshotData = context => {
-  context.commit('SET_PACKSHOT_DATA', getRandomPackshotData());
+function setSetFormData(context, data) {
+  context.commit('SET_PACKSHOT_DATA', getRandomPackshotData(data));
+}
+
+const setPackshotData = (context, data) => {
+  context.commit('SET_PACKSHOT_DATA', getRandomPackshotData(data));
 };
 
 const onSelection = (context, data) => {
@@ -39,6 +43,7 @@ const onRemove = (context, data) => {
 };
 
 export default {
+  setSetFormData,
   setPackshotData,
   onSelection,
   onDndStartAndStop,

@@ -1,26 +1,44 @@
 <template>
-<div class="dnd">
-  <dnd-list
-    v-for="(packshotData, index) in packshotsData"
-    :key="index"
-    v-bind="{ packshotData, ddEvents }">
-  </dnd-list>
+<div>
+  <div>
+    <select-ele v-bind="{ formItem, ssEvents }" v-model="formData"></select-ele>
+  </div>
+  <div class="dnd">
+    <dnd-list
+      v-for="(packshotData, index) in packshotsData"
+      :key="index"
+      v-bind="{ packshotData, ddEvents }">
+    </dnd-list>
+  </div>
 </div>
 </template>
 
 <script>
 import DndList from '../components/dnd/DndList';
+import Select from '../components/form-elements/Select';
 import { mapActions } from 'vuex';
 import { mapGetters } from 'vuex';
 
 export default {
-  created() {
-    this.setPackshotData();
+  data() {
+    return {
+      formData: {
+        Images: null
+      }
+    };
+  },
+  mounted() {
+    this.setPackshotData(this.initialSelection);
+    this.formData.Images = this.initialSelection;
   },
   components: {
-    'dnd-list': DndList
+    'dnd-list': DndList,
+    'select-ele': Select
   },
   methods: {
+    async ssEvents() {
+      this.setSetFormData(this.formData.Images);
+    },
     ddEvents(evt) {
       switch (evt.type) {
         case 'onSelected':
@@ -46,6 +64,7 @@ export default {
       }
     },
     ...mapActions({
+      setSetFormData: 'dragAndDrop/setSetFormData',
       setPackshotData: 'dragAndDrop/setPackshotData',
       onSelection: 'dragAndDrop/onSelection',
       onDndStartAndStop: 'dragAndDrop/onDndStartAndStop',
@@ -56,6 +75,8 @@ export default {
   },
   computed: {
     ...mapGetters({
+      formItem: 'dragAndDrop/getFormItem',
+      initialSelection: 'dragAndDrop/getInitialSelection',
       packshotsData: 'dragAndDrop/getPackshotData'
     })
   }
