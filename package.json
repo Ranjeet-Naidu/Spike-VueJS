@@ -6,9 +6,16 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "rm -rf .cache && rm -rf dist && parcel index.html",
-    "build": "rm -rf .cache && rm -rf dist && parcel build index.html"
+    "dev": "rm -rf .cache && rm -rf dist && parcel src/index.html -p 1234",
+    "build": "rm -rf .cache && rm -rf dist && parcel build src/index.html"
   },
+  "engines": {
+    "node": ">=7.0",
+    "npm": ">=4.0"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ],
   "dependencies": {
     "axios": "^0.18.0",
     "nanoid": "^1.0.2",
@@ -24,13 +31,8 @@
     "@vue/component-compiler-utils": "^1.0.0",
     "autoprefixer": "^8.1.0",
     "babel-eslint": "^8.2.2",
-    "babel-plugin-syntax-dynamic-import": "^6.18.0",
-    "babel-plugin-transform-es2015-destructuring": "^6.23.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-stage-2": "^6.24.1",
-    "css-loader": "^0.28.11",
     "eslint": "^4.19.0",
     "eslint-plugin-html": "^4.0.2",
     "eslint-plugin-vue": "^4.3.0",

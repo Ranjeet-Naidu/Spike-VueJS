@@ -1,9 +1,6 @@
 {
   "plugins": [
-    "transform-runtime",
-    "transform-es2015-destructuring",
     "transform-object-rest-spread",
-    "syntax-dynamic-import"
-  ],
-  "presets": ["env"]
+    "transform-runtime"
+  ]
 }
