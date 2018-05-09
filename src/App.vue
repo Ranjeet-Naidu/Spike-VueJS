@@ -1,5 +1,8 @@
 <template>
-  <v-app dark>
+<div>
+  {{drawer}}
+</div>
+  <!-- <v-app dark>
     <app-navigation v-bind="{ navData }" v-once></app-navigation>
     <v-content>
       <v-container grid-list-md>
@@ -11,7 +14,7 @@
     <v-footer app fixed>
       <span></span>
     </v-footer>
-  </v-app>
+  </v-app> -->
 </template>
 
 <script>
@@ -29,9 +32,9 @@ export default {
     };
   },
   computed: {
-    ...mapGetters({
-      navData: 'navigation/navData'
-    })
+    // ...mapGetters({
+    //   navData: 'navigation/navData'
+    // })
   }
 };
 </script>
