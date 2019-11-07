@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import LandingPage from '../views/Landing.vue';
+import proposition from '../views/proposition/proposition.vue';
 import DemoPage from '../views/Demo.vue';
 import FormBuilder from '../views/FormBuilder';
 import DragAndDrop from '../views/DragAndDrop';
@@ -12,9 +12,9 @@ const router = new VueRouter({
   scrollBehavior: () => ({ x: 0, y: 0 }),
   routes: [
     {
-      name: 'Landing',
+      name: 'Proposition',
       path: '/',
-      component: LandingPage
+      component: proposition
     },
     {
       name: 'Demo',

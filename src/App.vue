@@ -1,17 +1,5 @@
 <template>
-  <v-app dark>
-    <app-navigation v-bind="{ navData }" v-once></app-navigation>
-    <v-content>
-      <v-container grid-list-md>
-        <v-layout row>
-          <router-view fill-height></router-view>
-        </v-layout>
-      </v-container>
-    </v-content>
-    <v-footer app fixed>
-      <span></span>
-    </v-footer>
-  </v-app>
+  <router-view fill-height></router-view>
 </template>
 
 <script>

@@ -1,0 +1,884 @@
+[
+  {
+    "proposition": {
+      "pid": "739f4090-3657-11e7-9d97-7bf14c75be01",
+      "productCode": "KIDS",
+      "territory": "GB",
+      "aDevice": "MOBILE",
+      "aPlatform": "ANDROID",
+      "sync": true
+    },
+    "coreStatus": {
+      "app": "CORE",
+      "variant": "",
+      "status": "OK",
+      "heartbeatNode": {
+        "version": 650324,
+        "date": {
+          "nano": 86377000,
+          "epochSecond": 1573122200
+        },
+        "dateStr": "07-Nov-2019",
+        "timeStr": "10:23:20 GMT"
+      }
+    },
+    "frontendAppsStatus": [
+      {
+        "app": "DB-NODE",
+        "variant": "UNCACHED",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 650324,
+          "date": {
+            "nano": 86377000,
+            "epochSecond": 1573122200
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:23:20 GMT"
+        }
+      },
+      {
+        "app": "DB-NODE",
+        "variant": "CACHED",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 650324,
+          "date": {
+            "nano": 86377000,
+            "epochSecond": 1573122200
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:23:20 GMT"
+        }
+      },
+      {
+        "app": "ADAPTER-ATLAS",
+        "variant": "ORIGIN",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 650324,
+          "date": {
+            "nano": 86377000,
+            "epochSecond": 1573122200
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:23:20 GMT"
+        }
+      },
+      {
+        "app": "ADAPTER-ATLAS",
+        "variant": "AKAMAI",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 650323,
+          "date": {
+            "nano": 759451000,
+            "epochSecond": 1573121899
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:18:19 GMT"
+        }
+      }
+    ],
+    "previewAppsStatus": [
+      {
+        "app": "DB-NODE",
+        "variant": "UNCACHED-PREVIEW",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 650324,
+          "date": {
+            "nano": 86377000,
+            "epochSecond": 1573122200
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:23:20 GMT"
+        }
+      },
+      {
+        "app": "DB-NODE",
+        "variant": "CACHED-PREVIEW",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 650324,
+          "date": {
+            "nano": 86377000,
+            "epochSecond": 1573122200
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:23:20 GMT"
+        }
+      },
+      {
+        "app": "ADAPTER-ATLAS",
+        "variant": "PREVIEW",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 650324,
+          "date": {
+            "nano": 86377000,
+            "epochSecond": 1573122200
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:23:20 GMT"
+        }
+      }
+    ]
+  },
+  {
+    "proposition": {
+      "pid": "263320a0-f78d-11e6-9f80-eba3bd15b1e9",
+      "productCode": "NOWTV",
+      "territory": "GB",
+      "aDevice": "COMPUTER",
+      "aPlatform": "PC",
+      "sync": true
+    },
+    "coreStatus": {
+      "app": "CORE",
+      "variant": "",
+      "status": "OK",
+      "heartbeatNode": {
+        "version": 672190,
+        "date": {
+          "nano": 221726000,
+          "epochSecond": 1573122200
+        },
+        "dateStr": "07-Nov-2019",
+        "timeStr": "10:23:20 GMT"
+      }
+    },
+    "frontendAppsStatus": [
+      {
+        "app": "DB-NODE",
+        "variant": "UNCACHED",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 672190,
+          "date": {
+            "nano": 221726000,
+            "epochSecond": 1573122200
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:23:20 GMT"
+        }
+      },
+      {
+        "app": "DB-NODE",
+        "variant": "CACHED",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 672190,
+          "date": {
+            "nano": 221726000,
+            "epochSecond": 1573122200
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:23:20 GMT"
+        }
+      },
+      {
+        "app": "ADAPTER-ATLAS",
+        "variant": "ORIGIN",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 672189,
+          "date": {
+            "nano": 799563000,
+            "epochSecond": 1573121899
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:18:19 GMT"
+        }
+      },
+      {
+        "app": "ADAPTER-ATLAS",
+        "variant": "AKAMAI",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 672189,
+          "date": {
+            "nano": 799563000,
+            "epochSecond": 1573121899
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:18:19 GMT"
+        }
+      }
+    ],
+    "previewAppsStatus": [
+      {
+        "app": "DB-NODE",
+        "variant": "UNCACHED-PREVIEW",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 672190,
+          "date": {
+            "nano": 221726000,
+            "epochSecond": 1573122200
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:23:20 GMT"
+        }
+      },
+      {
+        "app": "DB-NODE",
+        "variant": "CACHED-PREVIEW",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 672190,
+          "date": {
+            "nano": 221726000,
+            "epochSecond": 1573122200
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:23:20 GMT"
+        }
+      },
+      {
+        "app": "ADAPTER-ATLAS",
+        "variant": "PREVIEW",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 672190,
+          "date": {
+            "nano": 221726000,
+            "epochSecond": 1573122200
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:23:20 GMT"
+        }
+      }
+    ]
+  },
+  {
+    "proposition": {
+      "pid": "5aabb5d0-eec9-11e6-a951-8f956a8d5610",
+      "productCode": "NOWTV",
+      "territory": "IE",
+      "aDevice": "COMPUTER",
+      "aPlatform": "PC",
+      "sync": true
+    },
+    "coreStatus": {
+      "app": "CORE",
+      "variant": "",
+      "status": "OK",
+      "heartbeatNode": {
+        "version": 672091,
+        "date": {
+          "nano": 257263000,
+          "epochSecond": 1573122200
+        },
+        "dateStr": "07-Nov-2019",
+        "timeStr": "10:23:20 GMT"
+      }
+    },
+    "frontendAppsStatus": [
+      {
+        "app": "DB-NODE",
+        "variant": "UNCACHED",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 672091,
+          "date": {
+            "nano": 257263000,
+            "epochSecond": 1573122200
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:23:20 GMT"
+        }
+      },
+      {
+        "app": "DB-NODE",
+        "variant": "CACHED",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 672091,
+          "date": {
+            "nano": 257263000,
+            "epochSecond": 1573122200
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:23:20 GMT"
+        }
+      },
+      {
+        "app": "ADAPTER-ATLAS",
+        "variant": "ORIGIN",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 672090,
+          "date": {
+            "nano": 830673000,
+            "epochSecond": 1573121899
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:18:19 GMT"
+        }
+      },
+      {
+        "app": "ADAPTER-ATLAS",
+        "variant": "AKAMAI",
+        "status": "KO",
+        "heartbeatNode": {
+          "version": 672089,
+          "date": {
+            "nano": 545762000,
+            "epochSecond": 1573121599
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:13:19 GMT"
+        }
+      }
+    ],
+    "previewAppsStatus": [
+      {
+        "app": "DB-NODE",
+        "variant": "UNCACHED-PREVIEW",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 672091,
+          "date": {
+            "nano": 257263000,
+            "epochSecond": 1573122200
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:23:20 GMT"
+        }
+      },
+      {
+        "app": "DB-NODE",
+        "variant": "CACHED-PREVIEW",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 672091,
+          "date": {
+            "nano": 257263000,
+            "epochSecond": 1573122200
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:23:20 GMT"
+        }
+      },
+      {
+        "app": "ADAPTER-ATLAS",
+        "variant": "PREVIEW",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 672091,
+          "date": {
+            "nano": 257263000,
+            "epochSecond": 1573122200
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:23:20 GMT"
+        }
+      }
+    ]
+  },
+  {
+    "proposition": {
+      "pid": "aab9cef6-b74d-11e8-aaad-eb15f23f3b38",
+      "productCode": "SBOSPORTS",
+      "territory": "GB",
+      "aDevice": "COMPUTER",
+      "aPlatform": "PC",
+      "sync": true
+    },
+    "coreStatus": {
+      "app": "CORE",
+      "variant": "",
+      "status": "OK",
+      "heartbeatNode": {
+        "version": 514773,
+        "date": {
+          "nano": 289401000,
+          "epochSecond": 1573122200
+        },
+        "dateStr": "07-Nov-2019",
+        "timeStr": "10:23:20 GMT"
+      }
+    },
+    "frontendAppsStatus": [
+      {
+        "app": "DB-NODE",
+        "variant": "UNCACHED",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 514773,
+          "date": {
+            "nano": 289401000,
+            "epochSecond": 1573122200
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:23:20 GMT"
+        }
+      },
+      {
+        "app": "DB-NODE",
+        "variant": "CACHED",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 514773,
+          "date": {
+            "nano": 289401000,
+            "epochSecond": 1573122200
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:23:20 GMT"
+        }
+      },
+      {
+        "app": "ADAPTER-ATLAS",
+        "variant": "ORIGIN",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 514773,
+          "date": {
+            "nano": 289401000,
+            "epochSecond": 1573122200
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:23:20 GMT"
+        }
+      },
+      {
+        "app": "ADAPTER-ATLAS",
+        "variant": "AKAMAI",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 514772,
+          "date": {
+            "nano": 868419000,
+            "epochSecond": 1573121899
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:18:19 GMT"
+        }
+      }
+    ],
+    "previewAppsStatus": [
+      {
+        "app": "DB-NODE",
+        "variant": "UNCACHED-PREVIEW",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 514773,
+          "date": {
+            "nano": 289401000,
+            "epochSecond": 1573122200
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:23:20 GMT"
+        }
+      },
+      {
+        "app": "DB-NODE",
+        "variant": "CACHED-PREVIEW",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 514773,
+          "date": {
+            "nano": 289401000,
+            "epochSecond": 1573122200
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:23:20 GMT"
+        }
+      },
+      {
+        "app": "ADAPTER-ATLAS",
+        "variant": "PREVIEW",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 514773,
+          "date": {
+            "nano": 289401000,
+            "epochSecond": 1573122200
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:23:20 GMT"
+        }
+      }
+    ]
+  },
+  {
+    "proposition": {
+      "pid": "335a464e-1ebd-11e7-a647-5307ac689576",
+      "productCode": "SKYGO",
+      "territory": "GB",
+      "aDevice": "COMPUTER",
+      "aPlatform": "PC",
+      "sync": true
+    },
+    "coreStatus": {
+      "app": "CORE",
+      "variant": "",
+      "status": "OK",
+      "heartbeatNode": {
+        "version": 663323,
+        "date": {
+          "nano": 321278000,
+          "epochSecond": 1573122200
+        },
+        "dateStr": "07-Nov-2019",
+        "timeStr": "10:23:20 GMT"
+      }
+    },
+    "frontendAppsStatus": [
+      {
+        "app": "DB-NODE",
+        "variant": "UNCACHED",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 663323,
+          "date": {
+            "nano": 321278000,
+            "epochSecond": 1573122200
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:23:20 GMT"
+        }
+      },
+      {
+        "app": "DB-NODE",
+        "variant": "CACHED",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 663323,
+          "date": {
+            "nano": 321278000,
+            "epochSecond": 1573122200
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:23:20 GMT"
+        }
+      },
+      {
+        "app": "ADAPTER-ATLAS",
+        "variant": "ORIGIN",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 663323,
+          "date": {
+            "nano": 321278000,
+            "epochSecond": 1573122200
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:23:20 GMT"
+        }
+      },
+      {
+        "app": "ADAPTER-ATLAS",
+        "variant": "AKAMAI",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 663322,
+          "date": {
+            "nano": 899343000,
+            "epochSecond": 1573121899
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:18:19 GMT"
+        }
+      }
+    ],
+    "previewAppsStatus": [
+      {
+        "app": "DB-NODE",
+        "variant": "UNCACHED-PREVIEW",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 663323,
+          "date": {
+            "nano": 321278000,
+            "epochSecond": 1573122200
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:23:20 GMT"
+        }
+      },
+      {
+        "app": "DB-NODE",
+        "variant": "CACHED-PREVIEW",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 663323,
+          "date": {
+            "nano": 321278000,
+            "epochSecond": 1573122200
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:23:20 GMT"
+        }
+      },
+      {
+        "app": "ADAPTER-ATLAS",
+        "variant": "PREVIEW",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 663323,
+          "date": {
+            "nano": 321278000,
+            "epochSecond": 1573122200
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:23:20 GMT"
+        }
+      }
+    ]
+  },
+  {
+    "proposition": {
+      "pid": "273f3084-4876-11e8-afa5-67a294a99976",
+      "productCode": "SSMTV",
+      "territory": "GB",
+      "aDevice": "MOBILE",
+      "aPlatform": "IOS",
+      "sync": true
+    },
+    "coreStatus": {
+      "app": "CORE",
+      "variant": "",
+      "status": "OK",
+      "heartbeatNode": {
+        "version": 555478,
+        "date": {
+          "nano": 367816000,
+          "epochSecond": 1573122200
+        },
+        "dateStr": "07-Nov-2019",
+        "timeStr": "10:23:20 GMT"
+      }
+    },
+    "frontendAppsStatus": [
+      {
+        "app": "DB-NODE",
+        "variant": "UNCACHED",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 555478,
+          "date": {
+            "nano": 367816000,
+            "epochSecond": 1573122200
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:23:20 GMT"
+        }
+      },
+      {
+        "app": "DB-NODE",
+        "variant": "CACHED",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 555478,
+          "date": {
+            "nano": 367816000,
+            "epochSecond": 1573122200
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:23:20 GMT"
+        }
+      },
+      {
+        "app": "ADAPTER-ATLAS",
+        "variant": "ORIGIN",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 555477,
+          "date": {
+            "nano": 930876000,
+            "epochSecond": 1573121899
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:18:19 GMT"
+        }
+      },
+      {
+        "app": "ADAPTER-ATLAS",
+        "variant": "AKAMAI",
+        "status": "KO",
+        "heartbeatNode": {
+          "version": 555476,
+          "date": {
+            "nano": 645835000,
+            "epochSecond": 1573121599
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:13:19 GMT"
+        }
+      }
+    ],
+    "previewAppsStatus": [
+      {
+        "app": "DB-NODE",
+        "variant": "UNCACHED-PREVIEW",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 555478,
+          "date": {
+            "nano": 367816000,
+            "epochSecond": 1573122200
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:23:20 GMT"
+        }
+      },
+      {
+        "app": "DB-NODE",
+        "variant": "CACHED-PREVIEW",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 555478,
+          "date": {
+            "nano": 367816000,
+            "epochSecond": 1573122200
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:23:20 GMT"
+        }
+      },
+      {
+        "app": "ADAPTER-ATLAS",
+        "variant": "PREVIEW",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 555478,
+          "date": {
+            "nano": 367816000,
+            "epochSecond": 1573122200
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:23:20 GMT"
+        }
+      }
+    ]
+  },
+  {
+    "proposition": {
+      "pid": "ce1353a0-4875-11e8-b9d1-13e4b45fe43d",
+      "productCode": "SSMTV",
+      "territory": "IE",
+      "aDevice": "MOBILE",
+      "aPlatform": "IOS",
+      "sync": true
+    },
+    "coreStatus": {
+      "app": "CORE",
+      "variant": "",
+      "status": "OK",
+      "heartbeatNode": {
+        "version": 554761,
+        "date": {
+          "nano": 403546000,
+          "epochSecond": 1573122200
+        },
+        "dateStr": "07-Nov-2019",
+        "timeStr": "10:23:20 GMT"
+      }
+    },
+    "frontendAppsStatus": [
+      {
+        "app": "DB-NODE",
+        "variant": "UNCACHED",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 554761,
+          "date": {
+            "nano": 403546000,
+            "epochSecond": 1573122200
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:23:20 GMT"
+        }
+      },
+      {
+        "app": "DB-NODE",
+        "variant": "CACHED",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 554761,
+          "date": {
+            "nano": 403546000,
+            "epochSecond": 1573122200
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:23:20 GMT"
+        }
+      },
+      {
+        "app": "ADAPTER-ATLAS",
+        "variant": "ORIGIN",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 554760,
+          "date": {
+            "nano": 961973000,
+            "epochSecond": 1573121899
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:18:19 GMT"
+        }
+      },
+      {
+        "app": "ADAPTER-ATLAS",
+        "variant": "AKAMAI",
+        "status": "KO",
+        "heartbeatNode": {
+          "version": 554759,
+          "date": {
+            "nano": 678314000,
+            "epochSecond": 1573121599
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:13:19 GMT"
+        }
+      }
+    ],
+    "previewAppsStatus": [
+      {
+        "app": "DB-NODE",
+        "variant": "UNCACHED-PREVIEW",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 554761,
+          "date": {
+            "nano": 403546000,
+            "epochSecond": 1573122200
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:23:20 GMT"
+        }
+      },
+      {
+        "app": "DB-NODE",
+        "variant": "CACHED-PREVIEW",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 554761,
+          "date": {
+            "nano": 403546000,
+            "epochSecond": 1573122200
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:23:20 GMT"
+        }
+      },
+      {
+        "app": "ADAPTER-ATLAS",
+        "variant": "PREVIEW",
+        "status": "OK",
+        "heartbeatNode": {
+          "version": 554761,
+          "date": {
+            "nano": 403546000,
+            "epochSecond": 1573122200
+          },
+          "dateStr": "07-Nov-2019",
+          "timeStr": "10:23:20 GMT"
+        }
+      }
+    ]
+  }
+]

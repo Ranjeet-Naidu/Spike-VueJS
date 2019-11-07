@@ -5,7 +5,7 @@ import mutations from './mutations';
 const state = {
   navData: [
     {
-      title: 'Landing',
+      title: 'Proposition',
       icon: 'dashboard',
       route: '/'
     },
