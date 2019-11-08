@@ -34,6 +34,9 @@ export default {
     this.loadData();
     this.loadOnInterval();
   },
+  destroyed() {
+    clearInterval(this.interval);
+  },
   methods: {
     async loadData() {
       console.log('this.loadData();');
@@ -75,7 +78,7 @@ export default {
 <style>
 .proposition {
   font-family: Helvetica, Arial, sans-serif;
-  color: #424242;
+  color: #676767;
 }
 
 .refresh-counter {

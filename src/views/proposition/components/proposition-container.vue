@@ -87,16 +87,17 @@ export default {
 
 .pic__primary {
   flex-basis: 25%;
-  border-color: #b3b3b3;
+  border-color: #dcdcdc;
   border-style: solid;
   border-width: 1px 0px 1px 1px;
+  background-color: #e8e8e8;
 }
 
 .pic__secondary {
   display: flex;
   flex-basis: 75%;
   flex-direction: column;
-  border-color: #b3b3b3;
+  border-color: #dcdcdc;
   border-style: solid;
   border-width: 1px 1px 1px 1px;
 }
@@ -108,6 +109,7 @@ export default {
 }
 
 .pic__secondary--front-end {
-  border-bottom: 1px solid #b3b3b3;
+  border-bottom: 1px solid #dcdcdc;
+  background-color: #dadada;
 }
 </style>
